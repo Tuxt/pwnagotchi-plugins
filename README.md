@@ -24,14 +24,11 @@ Battery Manager for MAX17048-based power supply
 
 ```bash
 cd ~
-sudo su
-source .pwn/bin/activate
-pip install MAX17048-smbus
-pwnagotchi plugins install batman
-systemctl restart pwnagotchi
+sudo bash -c 'source .pwn/bin/activate && pip install MAX17048-smbus'
+sudo pwnagotchi plugins install batman
 ```
 
-### Options
+### Configuration
 
 Add the necessary lines to `/etc/pwnagotchi/config.toml`
 
@@ -52,7 +49,8 @@ main.plugins.batman.voltage_precision = 2   # Decimal precision for voltage
 main.plugins.batman.format = "percent"      # Data to print: "percent" | "voltage" | "both"
 ```
 
+Finally, restart the service:
 
-
-
-
+```bash
+sudo systemctl restart pwnagotchi
+```
