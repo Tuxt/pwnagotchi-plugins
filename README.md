@@ -41,16 +41,30 @@ main.plugins.batman.enabled = true
 Optional:
 
 ```toml
-main.plugins.batman.x_offset = 15           # X-offset from the center of the screen
-main.plugins.batman.y_offset = 0            # Y-offset from the top of the screen
-main.plugin.batman.label = "BAT:"           # Label for the battery info
-main.plugins.batman.percent_precision = 0   # Decimal precision for percentage
-main.plugins.batman.voltage_precision = 2   # Decimal precision for voltage
-main.plugins.batman.format = "percent"      # Data to print: "percent" | "voltage" | "both"
+main.plugins.batman.x_offset = 14               # X-offset from the center of the screen
+main.plugins.batman.y_offset = 0                # Y-offset from the top of the screen
+main.plugin.batman.label = "BAT"                # Label for the battery info
+main.plugins.batman.percent_precision = 0       # Decimal precision for percentage
+main.plugins.batman.voltage_precision = 2       # Decimal precision for voltage
+main.plugins.batman.format = "percent"          # Data to print: "percent" | "voltage" | "both"
+main.plugins.batman.show_charge_icon = false    # Show an icon when device is charging
+main.plugins.batman.charge_icon = "⚡"          # Icon to indicate the device is charging
 ```
+
+> The example values ​​are the default values.
 
 Finally, restart the service:
 
 ```bash
 sudo systemctl restart pwnagotchi
 ```
+
+### 🧾 Changelog
+
+#### [1.1.0] - 2025-11-13
+##### Added
+- Added an optional charging indicator to show when the device is charging.
+
+#### [1.0.0] - 2025-11-12
+##### Initial release
+- Initial version of the plugin.
