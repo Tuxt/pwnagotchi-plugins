@@ -49,6 +49,7 @@ main.plugins.batman.voltage_precision = 2       # Decimal precision for voltage
 main.plugins.batman.format = "percent"          # Data to print: "percent" | "voltage" | "both"
 main.plugins.batman.show_charge_icon = false    # Show an icon when device is charging
 main.plugins.batman.charge_icon = "⚡"          # Icon to indicate the device is charging
+main.plugins.batman.charge_threshold = 0.1      # Voltage threshold for charger connection detection
 ```
 
 > The example values ​​are the default values.
@@ -60,6 +61,11 @@ sudo systemctl restart pwnagotchi
 ```
 
 ### 🧾 Changelog
+
+#### [1.2.0] - 2025-11-14
+##### Added
+- Added a configurable voltage threshold for charger detection, allowing users to adjust the threshold value.
+- Default threshold is 0.1V, configurable via the plugin configuration.
 
 #### [1.1.1] - 2025-11-14
 ##### Fixed
