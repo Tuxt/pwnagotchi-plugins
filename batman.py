@@ -7,7 +7,7 @@ from pwnagotchi.ui.view import BLACK
 
 class BatMan(Plugin):
     __author__ = "Tuxt <tuxt@protonmail.com>"
-    __version__ = "1.1.0"
+    __version__ = "1.1.1"
     __license__ = "GPL3"
     __description__ = "MAX17048-based battery manager"
 
@@ -51,7 +51,7 @@ class BatMan(Plugin):
             
             new_voltage = self.battery.cell_voltage
             diff = new_voltage - state["last_voltage"]
-            if abs(diff) > 0.05:
+            if abs(diff) > 0.1:
                 state["charging"] = diff > 0
             state["last_voltage"] = new_voltage
             

@@ -61,6 +61,10 @@ sudo systemctl restart pwnagotchi
 
 ### 🧾 Changelog
 
+#### [1.1.1] - 2025-11-14
+##### Fixed
+- Adjusted the voltage threshold for charger detection from 0.05V to 0.1V to reduce false positives during battery-only operation.
+
 #### [1.1.0] - 2025-11-13
 ##### Added
 - Added an optional charging indicator to show when the device is charging.
